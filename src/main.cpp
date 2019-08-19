@@ -97,11 +97,11 @@ void poll()
  */
 void print()
 {
-    Serial.print("Temperatuur: ");
+    Serial.print("Temperature: ");
     Serial.print(heaterController->getCurrentValue());
     Serial.println("");
 
-    Serial.print("Vochtigheid: ");
+    Serial.print("Humidity: ");
     Serial.print(humidifierController->getCurrentValue());
     Serial.println("");
 }
