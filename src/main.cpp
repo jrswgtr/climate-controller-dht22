@@ -29,7 +29,7 @@ ClimateController *coolerController;
 ClimateController *humidifierController;
 ClimateController *deHumidifierController;
 
-long lastPollTime = 0;
+long lastPollTime = POLL_INTERVAL * -1;
 
 void setup()
 {
@@ -78,7 +78,7 @@ void setup()
  */
 bool isTimeToPoll(long currentTime)
 {
-    return lastPollTime == 0 || currentTime - lastPollTime >= POLL_INTERVAL;
+    return currentTime - lastPollTime >= POLL_INTERVAL;
 }
 
 /**
